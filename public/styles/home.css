@@ -1,0 +1,58 @@
+body {
+  height: 100vh; /* Set the height of the body to fill the entire viewport height */
+  background-image: url('https://res.cloudinary.com/dy73d309d/image/upload/v1708709535/YelpAqua/ojfezoiufmojeiovd3fp.jpg'); /* Background image */
+  background-size: cover; /* Cover the entire page with the background image */
+  background-position: center; /* Center the background image */
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+}
+
+.cover-container {
+  max-width: 90vw; /* Max container width to 90% of the viewport width */
+  height: 100vh; /* Container height to fill the entire viewport height */
+  display: flex;
+  flex-direction: column; /* Organize children elements in a column */
+}
+
+main.px-3 {
+  flex-grow: 1; /* Allow <main> to fill available space */
+  display: flex;
+  flex-direction: column; /* Arrange <main> content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  width: 100%; /* Full width */
+  text-align: center; /* Center text */
+}
+
+h1,
+h3 {
+  color: white; /* White text for headings */
+}
+
+.lead {
+  color: white; /* White text for lead paragraphs */
+}
+
+.nav-link {
+  padding: 0.25rem 0;
+  font-weight: 700; /* Bold font for navigation links */
+  color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+  margin-left: 1rem; /* Space between navigation links */
+  border-bottom: 0.25rem solid transparent; /* Transparent bottom border */
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 1); /* Fully opaque white on hover */
+  border-bottom-color: rgba(255, 255, 255, 1); /* White bottom border on hover */
+}
+
+.nav-link.active {
+  color: white; /* White color for active link */
+  border-bottom-color: white; /* White bottom border for active link */
+}
+
+.btn-secondary,
+.btn-secondary:hover {
+  color: #333; /* Dark text color for secondary buttons */
+  text-shadow: none; /* No text shadow for buttons */
+}

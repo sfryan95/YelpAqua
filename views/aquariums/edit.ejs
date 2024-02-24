@@ -1,0 +1,53 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">Edit Aquarium</h1>
+  <div class="col-6 offset-3">
+    <form action="/aquariums/<%= aquarium._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" id="title" name="aquarium[title]" value="<%= aquarium.title %>" required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input class="form-control" type="text" id="location" name="aquarium[location]" value="<%= aquarium.location %>" required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="price">Aquarium Price</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">$</span>
+          <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="aquarium[price]" value="<%= aquarium.price %>" required />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-control" type="text" id="description" name="aquarium[description]" required><%= aquarium.description %></textarea>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <div class="form-file custom-file">
+          <input type="file" class="form-file-input" id="image" name="image" multiple onchange="displaySelectedFiles(this)" />
+          <label class="form-file-label" for="image">
+            <span class="form-file-text custom-file-label">Choose image(s)...</span>
+            <span class="form-file-button">Browse</span>
+          </label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <% aquarium.images.forEach(function(img, i) { %>
+        <img src="<%=img.thumbnail %>" class="img-thumbnail" alt="" />
+        <div class="form-check-inline">
+          <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>" />
+        </div>
+        <label for="image-<%=i%>">Delete?</label>
+        <% })%>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Update Aquarium</button>
+      </div>
+    </form>
+    <a href="/aquariums/<%= aquarium._id %>">Back to Aquarium</a>
+  </div>
+</div>
