@@ -36,7 +36,7 @@ const seedDB = async () => {
   for (let i = 0; i < citiesArr.length; i++) {
     const ticketPrice = Math.floor(Math.random() * (50 - 15 + 1)) + 15;
     const aquarium = new Aquarium({
-      author: '65d63cb802303258b9925267', // Ensure this is a valid ObjectId from your Atlas database
+      author: '65da5ee107f20466378e1aab', // Ensure this is a valid ObjectId from your Atlas database
       title: `${citiesArr[i].aquarium} Aquarium`,
       images: [
         {
