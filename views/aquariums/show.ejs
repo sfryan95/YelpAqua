@@ -29,7 +29,11 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item text-muted"><%= aquarium.location%></li>
-        <li class="list-group-item">Submitted by <%= aquarium.author.username%></li>
+        <% if(aquarium.author) { %>
+        <li class="list-group-item">Submitted by <%= aquarium.author.username %></li>
+        <% } else { %>
+        <li class="list-group-item">Submitted by Anonymous</li>
+        <% } %>
         <li class="list-group-item">$<%= aquarium.price%>/night</li>
       </ul>
       <% if( currentUser && aquarium.author.equals(currentUser._id)) {%>
