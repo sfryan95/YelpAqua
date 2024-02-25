@@ -1,12 +1,13 @@
 <% layout('layouts/boilerplate')%>
 <link rel="stylesheet" href="/styles/stars.css" />
+<link rel="stylesheet" href="/styles/show.css" />
 <div class="row">
   <div class="col-6">
     <div id="aquariumCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <% aquarium.images.forEach((img, i) => { %>
         <div class="carousel-item <%= i === 0 ? 'active' : ''%>">
-          <img src="<%= img.url%>" class="d-block w-100" alt="" crossorigin="anonymous" />
+          <img src="<%= img.url%>" class="d-block w-100 carousel-image" alt="" crossorigin="anonymous" />
         </div>
         <% }) %>
       </div>

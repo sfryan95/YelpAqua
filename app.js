@@ -27,7 +27,7 @@ const aquariumRoutes = require('./routes/aquariums');
 const reviewRoutes = require('./routes/reviews');
 
 // Database connection
-const dbUrl = process.env.DB_URL; /*|| 'mongodb://localhost:27017/yelp-aqua'*/
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-aqua';
 mongoose.connect(dbUrl, {});
 
 const db = mongoose.connection;

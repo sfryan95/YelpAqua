@@ -11,7 +11,7 @@ const citiesArr = require('./cities'); // Since cities.js is in the same directo
 const { descriptions } = require('./seedHelpers'); // Since seedHelpers.js is also in the same directory as index.js
 
 // Database connection
-const dbUrl = process.env.DB_URL; // Use MongoDB Atlas connection string from environment variable
+const dbUrl = process.env.DB_URL; /*|| 'mongodb://localhost:27017/yelp-aqua'*/
 
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
@@ -42,6 +42,22 @@ const seedDB = async () => {
         {
           url: 'https://res.cloudinary.com/dy73d309d/image/upload/v1708636962/YelpAqua/wcazfhafeaubic6xsvf5.jpg',
           filename: 'YelpAqua/wcazfhafeaubic6xsvf5',
+        },
+        {
+          url: 'https://res.cloudinary.com/dy73d309d/image/upload/v1708636963/YelpAqua/dttxbwegygct6ewflrmm.jpg',
+          filename: 'YelpAqua/dttxbwegygct6ewflrmm',
+        },
+        {
+          url: 'https://res.cloudinary.com/dy73d309d/image/upload/v1708636964/YelpAqua/q4rgblwwdr9x2gjwqdyz.jpg',
+          filename: 'YelpAqua/q4rgblwwdr9x2gjwqdyz',
+        },
+        {
+          url: 'https://res.cloudinary.com/dy73d309d/image/upload/v1708636965/YelpAqua/sskyot24g1aruhzrkavb.jpg',
+          filename: 'YelpAqua/sskyot24g1aruhzrkavb',
+        },
+        {
+          url: 'https://res.cloudinary.com/dy73d309d/image/upload/v1708636965/YelpAqua/wlcgvyknwvhclieafaem.jpg',
+          filename: 'YelpAqua/wlcgvyknwvhclieafaem',
         },
       ],
       price: ticketPrice,
