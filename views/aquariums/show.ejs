@@ -1,6 +1,12 @@
 <% layout('layouts/boilerplate')%>
 <link rel="stylesheet" href="/styles/stars.css" />
-<link rel="stylesheet" href="/styles/show.css" />
+<style>
+  .carousel-image {
+    height: 400px; /* or any specific height you prefer */
+    object-fit: cover; /* Cover the container without stretching. */
+    width: 100%; /* Make image width responsive to the container */
+  }
+</style>
 <div class="row">
   <div class="col-6">
     <div id="aquariumCarousel" class="carousel slide" data-ride="carousel">
