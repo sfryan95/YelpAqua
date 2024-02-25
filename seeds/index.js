@@ -17,7 +17,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const MongoStore = require('connect-mongo');
 
 // Import necessary modules for seeding
-const Aquarium = require('./models/aquarium'); // Adjust the path as necessary
+const Aquarium = require('../models/aquarium'); // Adjust the path as necessary
 const citiesArr = require('./seeds/cities'); // Adjust the path as necessary
 const { descriptions } = require('./seeds/seedHelpers'); // Adjust the path as necessary
 
