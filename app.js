@@ -59,9 +59,11 @@ const store = MongoStore.create({
   },
   touchAfter: 24 * 60 * 60,
 });
+
 store.on('error', function (e) {
   console.log('SESSION STORE ERROR', e);
 });
+
 const sessionConfig = {
   store,
   name: 'session',
@@ -74,6 +76,7 @@ const sessionConfig = {
     maxAge: 604800000,
   },
 };
+
 app.use(session(sessionConfig));
 app.use(flash());
 app.use(helmet({ contentSecurityPolicy: false })); // Note: Customize CSP as per your needs
