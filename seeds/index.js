@@ -17,9 +17,9 @@ const mongoSanitize = require('express-mongo-sanitize');
 const MongoStore = require('connect-mongo');
 
 // Import necessary modules for seeding
-const Aquarium = require('../models/aquarium'); // Adjust the path as necessary
-const citiesArr = require('./seeds/cities'); // Adjust the path as necessary
-const { descriptions } = require('./seeds/seedHelpers'); // Adjust the path as necessary
+const Aquarium = require('../models/aquarium'); // Path adjusted for index.js in the seeds directory
+const citiesArr = require('./cities'); // Since cities.js is in the same directory as index.js
+const { descriptions } = require('./seedHelpers'); // Since seedHelpers.js is also in the same directory as index.js
 
 // Database connection
 const dbUrl = process.env.DB_URL; // Use MongoDB Atlas connection string from environment variable
