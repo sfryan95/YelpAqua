@@ -1,9 +1,10 @@
 <% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/styles/index.css" />
 <div id="cluster-map"></div>
 <div class="container"></div>
 <h1>All Aquariums</h1>
-<div>
-  <a href="/aquariums/new">Add Aquarium</a>
+<div class="mb-3">
+  <a class="btn btn-success" href="/aquariums/new">Add Aquarium</a>
 </div>
 
 <% for (let aquarium of aquariums) { %>
@@ -23,9 +24,7 @@
           <p class="card-text">
             <small class="text-muted"><%= aquarium.location%></small>
           </p>
-          <a class="btn btn-primary" href="/aquariums/<%=aquarium._id%>"
-            >View</a
-          >
+          <a class="btn btn-primary" href="/aquariums/<%=aquarium._id%>">View</a>
         </div>
       </div>
     </div>
